@@ -1,0 +1,148 @@
+:root {
+  --text: #1f2933;
+  --muted: #5f6c7b;
+  --border: #e5e7eb;
+  --bg: #ffffff;
+  --soft-bg: #f7f8fa;
+  --accent: #222222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.65;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.hero {
+  text-align: center;
+  padding: 28px 0 32px;
+}
+
+.title {
+  margin: 0 auto 18px;
+  max-width: 960px;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.12;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+.authors {
+  margin: 10px 0 4px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.affiliation,
+.date {
+  margin: 4px 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 112px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 650;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  opacity: 0.88;
+}
+
+.section {
+  margin-top: 42px;
+}
+
+.section h2 {
+  margin: 0 0 16px;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.abstract {
+  text-align: justify;
+  font-size: 1.04rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--soft-bg);
+  border: 1px solid var(--border);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.bibtex {
+  margin: 0;
+  padding: 18px 20px;
+  background: var(--soft-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow-x: auto;
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 32px 18px 48px;
+  }
+
+  .hero {
+    padding-top: 16px;
+  }
+
+  .abstract {
+    text-align: left;
+  }
+}
+
